@@ -85,6 +85,8 @@ class Translator:
     def grinding(self, audio_ys, start):
         '''
         Нарезает звук на отрезки, пока каждый из них не станет меньшим, чем 2 секунды
+        audio_ys - значение амплитуды
+        start - индекс начала
         '''
         # получаем громкие звуки
         high_sound = np.concatenate(
@@ -183,7 +185,7 @@ class Translator:
 
     def show(self, ys):
         '''
-        записывает на диск аудио файл с волной ys
+        записывает на диск аудио файл с значением амплитуд ys
         '''
         wave = Wave(ys, framerate=self.framerate)
         wave.write(f'output/audio_{self.file}.wav')
