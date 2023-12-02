@@ -63,7 +63,7 @@ print(result["text"])
 
 Чтобы установить библиотеки необходимо ввести следующую команду:
 ```
-pip -U install numpy scipy openai-whisper progress
+pip install -U numpy scipy openai-whisper progress
 ```
 
 #### Запуск скрипта:
